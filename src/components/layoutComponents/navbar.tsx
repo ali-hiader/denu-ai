@@ -4,7 +4,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-dark-deeper/80 backdrop-blur-sm border-b border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050A14]/80 backdrop-blur-sm border-b border-gray-800">
       {" "}
       <div className="container mx-auto px-4">
         {" "}

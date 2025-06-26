@@ -1,7 +1,10 @@
+"use client";
+
 import * as React from "react";
 
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -25,8 +28,27 @@ const imageData = [
 ];
 
 export default function ImageCarousel() {
+  const [api, setApi] = React.useState<CarouselApi>();
+  const intervalRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  React.useEffect(() => {
+    if (!api) return;
+
+    intervalRef.current = setInterval(() => {
+      if (!api) return;
+      const current = api.selectedScrollSnap();
+      const total = api.scrollSnapList().length;
+      api.scrollTo((current + 1) % total);
+    }, 3000); // autoplay every 3 seconds
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [api]);
+
   return (
     <Carousel
+      setApi={setApi}
       className="w-full max-w-xs"
       opts={{ loop: true, align: "start", active: true }}
     >

@@ -21,7 +21,7 @@ export const BeforeAfterRevealCard: React.FC<BeforeAfterRevealCardProps> = ({
       <div className="absolute -inset-1.5 bg-gradient-to-br from-primary/20 to-transparent rounded-lg blur-2xl animate-pulse"></div>
 
       {/* Main content */}
-      <div className="relative bg-dark-deeper rounded-lg p-1 backdrop-blur-sm border border-primary/10">
+      <div className="relative bg-dark-deeper rounded-lg backdrop-blur-sm border border-primary/10">
         <div
           className="relative w-full aspect-[3/4] rounded-lg overflow-hidden group"
           role="img"
