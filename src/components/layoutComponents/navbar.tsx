@@ -53,7 +53,7 @@ function Navbar() {
             </nav>{" "}
           </div>{" "}
           <Link
-            href="https://use.n8ked.app/login"
+            href="https://use.DenuAI.app/login"
             className="inline-flex items-center justify-center px-6 py-2 border border-transparent rounded-full text-sm font-semibold text-white bg-primary hover:bg-primary-dark transition-all duration-300 hover:scale-105"
           >
             Login

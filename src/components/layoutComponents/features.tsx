@@ -12,7 +12,7 @@ function Features() {
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary mb-6 backdrop-blur-sm border border-primary/20">
             {" "}
             <span className="text-sm font-semibold">
-              Why Choose N8ked?
+              Why Choose DenuAI?
             </span>{" "}
           </div>{" "}
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">

@@ -1,5 +1,6 @@
-import Image from "next/image";
 import React from "react";
+import { BeforeAfterRevealCard } from "./beforeAndAfter";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -57,9 +58,9 @@ function Header() {
                 {" "}
                 <div className="flex flex-col items-center sm:items-start w-full sm:w-auto">
                   {" "}
-                  <a
+                  <Link
                     seo-landings=""
-                    href="https://use.n8ked.app/register"
+                    href="#"
                     className="group relative inline-block w-full sm:w-auto"
                   >
                     {" "}
@@ -81,13 +82,13 @@ function Header() {
                         ></path>{" "}
                       </svg>{" "}
                     </div>{" "}
-                  </a>{" "}
+                  </Link>{" "}
                   <span className="text-sm text-gray-400 mt-2">
                     ✨ 3 free nudes included
                   </span>{" "}
                 </div>{" "}
-                <a
-                  href="https://t.me/n8kedapp_bot"
+                <Link
+                  href="#"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative inline-block self-center sm:self-start w-full sm:w-auto"
@@ -107,7 +108,7 @@ function Header() {
                     </svg>{" "}
                     <span>Telegram Bot</span>{" "}
                   </div>{" "}
-                </a>{" "}
+                </Link>{" "}
                 <a
                   href="#how-it-works"
                   className="group relative inline-block self-center sm:self-start w-full sm:w-auto"
@@ -204,66 +205,10 @@ function Header() {
               </div>{" "}
             </div>{" "}
           </div>{" "}
-          <div className="flex-1 w-full max-w-[280px] sm:max-w-md mx-auto relative">
-            {" "}
-            <div className="absolute -inset-1 bg-gradient-to-br from-primary/30 to-primary/10 rounded-lg blur-xl"></div>{" "}
-            <div className="absolute -inset-1.5 bg-gradient-to-br from-primary/20 to-transparent rounded-lg blur-2xl animate-pulse"></div>{" "}
-            <div className="relative bg-dark-deeper rounded-lg p-1 backdrop-blur-sm border border-primary/10">
-              {" "}
-              <div
-                className="relative w-full aspect-[3/4] rounded-lg overflow-hidden group"
-                role="img"
-                aria-label="Before and after image comparison"
-                data-astro-cid-fztqauyw=""
-              >
-                {" "}
-                <Image
-                  src="/image-2.jpg"
-                  alt="Before transformation"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading="eager"
-                  decoding="async"
-                  data-astro-cid-fztqauyw=""
-                  width={500}
-                  height={1000}
-                />{" "}
-                <div
-                  className="absolute inset-0 clip-animation"
-                  data-astro-cid-fztqauyw=""
-                >
-                  {" "}
-                  <Image
-                    src="/image-2.jpg"
-                    alt="After transformation"
-                    className="w-full h-full object-cover"
-                    loading="eager"
-                    decoding="sync"
-                    data-astro-cid-fztqauyw=""
-                    width={500}
-                    height={1000}
-                  />{" "}
-                </div>{" "}
-                <div
-                  className="absolute inset-0 pointer-events-none"
-                  role="presentation"
-                  aria-hidden="true"
-                  data-astro-cid-fztqauyw=""
-                >
-                  {" "}
-                  <div
-                    className="absolute top-0 h-full w-1 scanning-line"
-                    data-astro-cid-fztqauyw=""
-                  >
-                    {" "}
-                    <div
-                      className="h-full w-full bg-gradient-to-b from-transparent via-primary to-transparent opacity-50 blur-[2px]"
-                      data-astro-cid-fztqauyw=""
-                    ></div>{" "}
-                  </div>{" "}
-                </div>{" "}
-              </div>{" "}
-            </div>{" "}
-          </div>{" "}
+          <BeforeAfterRevealCard
+            beforeSrc="/nude0.avif"
+            afterSrc="/clothes0.avif"
+          />
           <div className="md:hidden w-full">
             {" "}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">

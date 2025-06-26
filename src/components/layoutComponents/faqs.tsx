@@ -10,7 +10,7 @@ function FAQs() {
           FAQs
         </h2>{" "}
         <p className="text-xl text-center text-gray-300 mb-12">
-          Questions about N8ked? Here are the answers!
+          Questions about DenuAI? Here are the answers!
         </p>{" "}
         <div className="max-w-3xl mx-auto">
           {" "}
@@ -19,10 +19,10 @@ function FAQs() {
             <div className="border-b border-gray-700 pb-6">
               {" "}
               <h3 className="text-xl font-semibold mb-2 text-white">
-                Is N8ked Free?
+                Is DenuAI Free?
               </h3>{" "}
               <p className="text-gray-300">
-                N8ked operates on a freemium model, allowing you to experiment
+                DenuAI operates on a freemium model, allowing you to experiment
                 with the free version and offering 3 PRO credits to test our PRO
                 features. We do not charge recurring subscriptions; instead, you
                 only pay for the credits you want as a one-time payment.
@@ -31,10 +31,10 @@ function FAQs() {
             <div className="border-b border-gray-700 pb-6">
               {" "}
               <h3 className="text-xl font-semibold mb-2 text-white">
-                How does N8ked work?
+                How does DenuAI work?
               </h3>{" "}
               <p className="text-gray-300">
-                N8ked uses AI and computer vision to automatically create nude
+                DenuAI uses AI and computer vision to automatically create nude
                 images without the need for manual brushing over clothes. Our
                 proprietary technology delivers superior results faster than our
                 competitors.
@@ -65,7 +65,7 @@ function FAQs() {
                 generation times. The PRO version provides access to
                 non-watermarked deepnudes with high resolution and a much faster
                 queue. The API is designed for developers. With API credits, you
-                can build your own N8ked service and utilize our deepnude
+                can build your own DenuAI service and utilize our deepnude
                 technology at half the price per image.
               </p>{" "}
             </div>{" "}

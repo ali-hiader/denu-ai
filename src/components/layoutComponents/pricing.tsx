@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Pricing() {
@@ -61,13 +62,13 @@ function Pricing() {
               </ul>{" "}
               <div className="relative">
                 {" "}
-                <a
-                  href="https://use.n8ked.app/register"
+                <Link
+                  href="#"
                   className="relative block w-full text-center py-3 px-6 rounded-full font-bold transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600 hover:scale-[1.02]"
                 >
                   {" "}
                   Start Free{" "}
-                </a>{" "}
+                </Link>{" "}
               </div>{" "}
             </div>{" "}
           </div>
@@ -113,13 +114,13 @@ function Pricing() {
               </ul>{" "}
               <div className="relative">
                 {" "}
-                <a
-                  href="https://use.n8ked.app/register"
+                <Link
+                  href="#"
                   className="relative block w-full text-center py-3 px-6 rounded-full font-bold transition-all duration-300 bg-primary text-white hover:bg-primary-dark hover:scale-[1.02]"
                 >
                   {" "}
                   Go Pro{" "}
-                </a>{" "}
+                </Link>{" "}
               </div>{" "}
             </div>{" "}
             <div className="absolute -inset-1 bg-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>{" "}
@@ -162,13 +163,13 @@ function Pricing() {
               </ul>{" "}
               <div className="relative">
                 {" "}
-                <a
-                  href="https://use.n8ked.app/register"
+                <Link
+                  href="#"
                   className="relative block w-full text-center py-3 px-6 rounded-full font-bold transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600 hover:scale-[1.02]"
                 >
                   {" "}
                   Get API Access{" "}
-                </a>{" "}
+                </Link>{" "}
               </div>{" "}
             </div>{" "}
           </div>{" "}

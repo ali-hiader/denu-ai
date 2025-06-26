@@ -121,3 +121,36 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  @keyframes revealClip {
+    0% {
+      clip-path: inset(0 0% 0 100%);
+    }
+    50% {
+      clip-path: inset(0 0% 0 0);
+    }
+    100% {
+      clip-path: inset(0 0% 0 100%);
+    }
+  }
+
+  @keyframes moveLeftRight {
+    0% {
+      right: 2; /* 500 - 30 (dot width) */
+    }
+    /* 25% {
+      left: 50%;
+    } */
+    50% {
+      right: 99%;
+      opacity: 0.5;
+    }
+    /* 75% {
+      left: 50%;
+    } */
+    100% {
+      right: 2;
+    }
+  }
+}

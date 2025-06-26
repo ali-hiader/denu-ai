@@ -16,21 +16,21 @@ function Footer() {
             <div className="flex flex-wrap gap-4 md:gap-6">
               {" "}
               <a
-                href="https://use.n8ked.app/terms-of-service"
+                href="https://use.DenuAI.app/terms-of-service"
                 className="text-sm text-gray-400 hover:text-primary transition-colors"
               >
                 {" "}
                 Terms{" "}
               </a>
               <a
-                href="https://use.n8ked.app/privacy-policy"
+                href="https://use.DenuAI.app/privacy-policy"
                 className="text-sm text-gray-400 hover:text-primary transition-colors"
               >
                 {" "}
                 Privacy{" "}
               </a>
               <a
-                href="mailto:hey@n8ked.app"
+                href="mailto:hey@DenuAI.app"
                 className="text-sm text-gray-400 hover:text-primary transition-colors"
               >
                 {" "}
@@ -50,14 +50,14 @@ function Footer() {
                 className="text-gray-400 hover:text-primary text-sm"
               >
                 {" "}
-                Celebrity Nude Generator with N8ked AI{" "}
+                Celebrity Nude Generator with DenuAI AI{" "}
               </a>
               <a
                 href="/ai-girlfriend"
                 className="text-gray-400 hover:text-primary text-sm"
               >
                 {" "}
-                AI Girlfriend Creator with N8ked AI{" "}
+                AI Girlfriend Creator with DenuAI AI{" "}
               </a>
               <a
                 href="/anime-ai-nude"
@@ -71,7 +71,7 @@ function Footer() {
                 className="text-gray-400 hover:text-primary text-sm"
               >
                 {" "}
-                Nudify Photos with N8ked AI{" "}
+                Nudify Photos with DenuAI AI{" "}
               </a>
               <a
                 href="/bikini-to-nude"
@@ -84,7 +84,7 @@ function Footer() {
           </div>{" "}
           <div className="text-center text-sm text-gray-400">
             {" "}
-            <p>© 2025 N8ked. All rights reserved.</p>{" "}
+            <p>© 2025 DenuAI. All rights reserved.</p>{" "}
           </div>{" "}
           <div className="border-t border-gray-800 pt-8 mt-8">
             {" "}
