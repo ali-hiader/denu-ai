@@ -43,10 +43,10 @@ function Header() {
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-[1]">
                 {" "}
                 Undress images with{" "}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-light">
+                <span className="bg-clip-text text-transparent bg-primary">
                   Denu
                 </span>{" "}
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-white">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-white">
                   {" "}
                   AI
                 </span>{" "}

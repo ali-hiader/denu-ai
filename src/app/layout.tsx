@@ -3,7 +3,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layoutComponents/navbar";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -30,7 +29,6 @@ export default function RootLayout({
             "radial-gradient(circle at 50% 120%, rgba(235, 0, 144, 0.1), rgba(0, 0, 0, 0) 50%)",
         }}
       >
-        <Navbar />
         {children}
       </body>
     </html>
