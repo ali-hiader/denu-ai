@@ -6,14 +6,7 @@ function ProFeatures() {
       <div className="flex flex-col gap-5 md:justify-center md:items-center relative">
         <div className="flex gap-1 items-center relative">
           <h5 className="text-xl leading-5 bg-gradient-to-r from-[#b349f5] to-[#de4bea] bg-clip-text text-transparent">
-            <span
-              className="text-xl font-medium bg-gradient-to-r from-[#B349F5] to-[#DE4BEA] bg-clip-text text-transparent"
-              //   x-bind:className="{
-              //            'bg-gradient-to-r from-[#B349F5] to-[#DE4BEA] bg-clip-text text-transparent': isPro,
-              //            'text-gray-200':
-              //                isPro
-              //        }"
-            >
+            <span className="text-xl font-medium bg-gradient-to-r from-[#B349F5] to-[#DE4BEA] bg-clip-text text-transparent">
               DenuAI <span x-text="isPro ? 'PRO' : 'FREE'">PRO</span>
             </span>
           </h5>
@@ -22,8 +15,6 @@ function ProFeatures() {
             height="20"
             viewBox="0 0 20 20"
             fill="none"
-            // xmlns="http://www.w3.org/2000/svg"
-            // x-bind:className="{ 'block': isPro, 'hidden': !isPro }"
             className="block"
           >
             <path

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import CrossIcon from "./icons/cross";
 import SearchIcon from "./icons/search";
 import {
@@ -11,6 +13,7 @@ import CustomCheckbox from "./checkbox";
 import SettingDialog from "./setting-dialog";
 
 function ApiTasks() {
+  const [inputValue, setInputValue] = useState("");
   return (
     <section className="p-6 rounded-lg">
       <h3 className="mb-4 text-lg font-semibold text-white">Your API Tasks</h3>
@@ -32,7 +35,7 @@ function ApiTasks() {
                 Search
               </label>
 
-              <label className="fi-input-wrp flex rounded-lg ring-1 max-w-60 transition duration-75 bg-white/5 shadow-[0_0_1px_1px_rgba(255,255,255,0.2)] dark:bg-white/5 focus-within:ring-2 ring-gray-950/10 dark:ring-white/20 focus-within:ring-primary-600 dark:focus-within:ring-primary-500">
+              <label className="fi-input-wrp flex rounded-lg ring-1 max-w-60 transition duration-75 bg-white/5 shadow-[0_0_1px_1px_rgba(255,255,255,0.2)] dark:bg-white/5 focus-within:ring-2 ring-gray-950/10 dark:ring-white/20 focus-within:ring-[#d97706] dark:focus-within:ring-primary-500">
                 <span className="flex items-center gap-x-3 ps-3 pe-2">
                   <SearchIcon />
                 </span>
@@ -45,6 +48,8 @@ function ApiTasks() {
                     placeholder="Search"
                     type="search"
                     id="input-2"
+                    onChange={(e) => setInputValue(e.target.value)}
+                    value={inputValue}
                   />
                 </div>
               </label>
@@ -90,36 +95,42 @@ function ApiTasks() {
               </DropdownMenu>
             </div>
           </div>
-
-          {/* <div className="fi-ta-filter-indicators flex items-start justify-between gap-x-3 bg-gray-50 px-3 py-1.5 dark:bg-white/5 sm:px-6">
-            <div className="flex flex-col gap-x-3 gap-y-1 sm:flex-row">
-              <span className="whitespace-nowrap text-sm font-medium leading-6 text-gray-700 dark:text-gray-200">
-                Active filters
-              </span>
-
-              <div className="flex flex-wrap gap-1.5">
-                <span>
-                  <span className="grid">
-                    <span className="truncate">Search: Just the ui</span>
-                  </span>
-                  <button type="button">
-                    <svg
-                      className="h-3.5 w-3.5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      data-slot="icon"
-                    >
-                      <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"></path>
-                    </svg>
-
-                    <span className="sr-only">Remove filter</span>
-                  </button>
+          {inputValue.length !== 0 && (
+            <div className="fi-ta-filter-indicators flex items-start justify-between gap-x-3 bg-gray-50 px-3 py-1.5 dark:bg-white/5 sm:px-6 h-fit">
+              <div className="flex gap-x-3 gap-y-1 sm:flex-row h-fit">
+                <span className="whitespace-nowrap text-sm font-medium leading-6 text-gray-700 dark:text-gray-200">
+                  Active filters
                 </span>
+
+                <div className="flex flex-wrap gap-1.5">
+                  <span className="fi-badge flex items-center justify-center gap-x-1 rounded-md text-xs font-medium ring-1 ring-inset px-2 min-w-[theme(spacing.6)] py-1 fi-color-custom bg-[#fffbeb] text-[#d97706] ring-[#d97706]/10 dark:bg-custom-400/10 dark:text-custom-400 dark:ring-custom-400/30 fi-color-primary">
+                    <span className="grid">
+                      <span className="truncate">Search: {inputValue}</span>
+                    </span>
+
+                    <button
+                      type="button"
+                      onClick={() => setInputValue("")}
+                      className="fi-badge-delete-button -my-1 -me-2 -ms-1 flex items-center justify-center p-1 outline-none transition duration-75 text-custom-700/50 hover:text-custom-700/75 focus-visible:text-custom-700/75 dark:text-custom-300/50 dark:hover:text-custom-300/75 dark:focus-visible:text-custom-300/75"
+                    >
+                      <svg
+                        className="h-3.5 w-3.5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"></path>
+                      </svg>
+
+                      <span className="sr-only">Remove filter</span>
+                    </button>
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="mt-0.5">
+
+              {/* <div className="mt-0.5">
               <button>
                 <svg
                   className="fi-icon-btn-icon h-5 w-5"
@@ -151,9 +162,9 @@ function ApiTasks() {
                   ></path>
                 </svg>
               </button>
+            </div> */}
             </div>
-          </div> */}
-
+          )}
           <div className="fi-ta-empty-state px-6 py-12 bg-[#1E122E] ring-1 ring-white/10 rounded-b-xl">
             <div className="fi-ta-empty-state-content mx-auto grid max-w-lg justify-items-center text-center">
               <div className="fi-ta-empty-state-icon-ctn mb-4 rounded-full bg-gray-100 p-3 dark:bg-gray-500/20">
