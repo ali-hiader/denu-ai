@@ -7,11 +7,13 @@ function AffliateMainContent() {
   const inputRef = useRef<null | HTMLInputElement>(null);
   async function copyReferralLink() {
     await navigator.clipboard.writeText(inputRef.current?.value || "");
-    toast("Copied to clipboard!", {
+    toast("✔︎ Success!", {
+      description: "Link copied to clipboard",
       position: "top-right",
       style: {
-        background: "#131313",
+        background: "#250F39",
         color: "#fff",
+        border: "none",
       },
     });
   }

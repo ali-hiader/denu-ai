@@ -43,7 +43,7 @@ function page() {
                             Token Name
                           </label>
                           <input
-                            className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 focus:ring-white/90 rounded-lg shadow-inner-md mt-1 block w-full"
+                            className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 focus:ring-white/90 rounded-lg shadow-inner-md px-4 py-2 ring-1 ring-white/20"
                             id="name"
                             type="text"
                           />
@@ -61,7 +61,7 @@ function page() {
                             <label className="flex items-center">
                               <input
                                 type="checkbox"
-                                className="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500"
+                                className="rounded border-gray-300 text-indigo-600 shadow-sm focus-within::ring-1 focus:ring-indigo-500"
                                 value="generate"
                               />
                               <span className="ms-2 text-sm text-gray-600">

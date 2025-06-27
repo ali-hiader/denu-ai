@@ -25,19 +25,19 @@ function ApiTasks() {
       <div className="rounded-lg">
         <div>
           <div className="flex shrink-0 items-center gap-x-4"></div>
-          <div className="fi-ta-header-toolbar flex items-center justify-between gap-x-4 px-4 py-3 sm:px-6 bg-[#221832] divide-y divide-white/10 rounded-t-xl">
+          <div className="fi-ta-header-toolbar flex items-center justify-between gap-x-4 px-4 py-3 sm:px-6 bg-[#221832] divide-y divide-white/10 rounded-t-xl ring-1 ring-white/10">
             <div></div>
             <div x-id="['input']" className="flex items-center gap-3">
               <label className="sr-only" htmlFor="input-2">
                 Search
               </label>
 
-              <label className="fi-input-wrp flex rounded-lg ring-1 min-w-60 transition duration-75 bg-white/5 shadow-[0_0_1px_1px_rgba(255,255,255,0.2)] dark:bg-white/5 focus-within:ring-2 ring-gray-950/10 dark:ring-white/20 focus-within:ring-primary-600 dark:focus-within:ring-primary-500">
+              <label className="fi-input-wrp flex rounded-lg ring-1 max-w-60 transition duration-75 bg-white/5 shadow-[0_0_1px_1px_rgba(255,255,255,0.2)] dark:bg-white/5 focus-within:ring-2 ring-gray-950/10 dark:ring-white/20 focus-within:ring-primary-600 dark:focus-within:ring-primary-500">
                 <span className="flex items-center gap-x-3 ps-3 pe-2">
                   <SearchIcon />
                 </span>
 
-                <div className=" min-w-0 flex-1 pointer-events-none">
+                <div className=" min-w-0 w-full flex-1 pointer-events-none">
                   <input
                     className="block w-full border-none outline-none py-1.5 text-base text-white transition duration-75  placeholder:text-gray-400 focus:ring-0 disabled:text-gray-500 disabled:[-webkit-text-fill-color:theme(colors.gray.500)] disabled:placeholder:[-webkit-text-fill-color:theme(colors.gray.400)] dark:text-white dark:placeholder:text-gray-500 dark:disabled:text-gray-400 dark:disabled:[-webkit-text-fill-color:theme(colors.gray.400)] dark:disabled:placeholder:[-webkit-text-fill-color:theme(colors.gray.500)] sm:text-sm sm:leading-6 bg-white/0 ps-0 pe-3"
                     autoComplete="off"
@@ -55,7 +55,7 @@ function ApiTasks() {
                     <ThreeBarsIcon />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56" align="end">
+                <DropdownMenuContent className="w-56 z-[100]" align="end">
                   <div className="absolute z-10 w-full rounded-lg bg-white/10 ring-1 shadow-lg ring-white/40 transition dark:bg-gray-900 dark:ring-white/10 ">
                     <div className="grid gap-y-4 p-6">
                       <h4 className="text-base font-semibold leading-6 text-white">
@@ -154,7 +154,7 @@ function ApiTasks() {
             </div>
           </div> */}
 
-          <div className="fi-ta-empty-state px-6 py-12 bg-white/[2%]">
+          <div className="fi-ta-empty-state px-6 py-12 bg-[#1E122E] ring-1 ring-white/10 rounded-b-xl">
             <div className="fi-ta-empty-state-content mx-auto grid max-w-lg justify-items-center text-center">
               <div className="fi-ta-empty-state-icon-ctn mb-4 rounded-full bg-gray-100 p-3 dark:bg-gray-500/20">
                 {" "}

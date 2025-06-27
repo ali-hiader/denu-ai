@@ -40,7 +40,9 @@ export default function CustomCheckbox({ name }: { name: string }) {
           )}
         </div>
       </label>
-      <span className="text-sm font-medium text-white">{name}</span>
+      <span className="text-sm font-medium w-full whitespace-nowrap text-white">
+        {name}
+      </span>
     </div>
   );
 }

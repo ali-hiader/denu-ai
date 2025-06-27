@@ -39,10 +39,11 @@ function page() {
                         Name
                       </label>
                       <input
-                        className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 py-2 rounded-lg shadow-inner-md focus:ring-pink-500 shadow-inner-xl shadow-[#B353EB]/80 ring-inset ring-[1px] ring-white/20"
+                        className="mt-1 block w-3/4 px-4 bg-white/[6%] text-white border-white/20 focus:border-white/20 py-2 rounded-lg shadow-inner-md focus:ring-pink-500 shadow-inner-xl shadow-[#B353EB]/80 ring-inset ring-[1px] ring-white/20 shadow-[inset_0_0_8px_2px_rgba(179,83,235,0.4),inset_0_0_2px_rgba(255,255,255,0.2)]"
                         id="text"
                         type="name"
                         required
+                        defaultValue="Ali Haider"
                       />
                     </div>
 
@@ -54,17 +55,18 @@ function page() {
                         Email
                       </label>
                       <input
-                        className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 py-2 rounded-lg shadow-inner-md focus:ring-pink-500 shadow-inner-xl shadow-[#B353EB]/80 ring-inset ring-[1px] ring-white/20"
+                        className="mt-1 block w-3/4 px-4 bg-white/[6%] text-white border-white/20 focus:border-white/20 py-2 rounded-lg shadow-inner-md focus:ring-pink-500 ring-inset ring-[1px] ring-white/20 shadow-[inset_0_0_8px_2px_rgba(179,83,235,0.4),inset_0_0_2px_rgba(255,255,255,0.2)]"
                         id="email"
                         type="email"
                         required
+                        defaultValue="ali@example.com"
                       />
                     </div>
                   </div>
                   <div className="flex justify-start mt-4">
                     <div className="text-sm hidden text-white me-3">Saved.</div>
 
-                    <button className="rounded-xl flex gap-2.5 justify-center items-center relative h-full w-auto flex justify-center bg-transparent items-center text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40">
+                    <button className="rounded-xl flex gap-2.5 justify-center items-center relative h-full w-auto bg-transparent text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40">
                       <div className="ring-inset ring-[1px] ring-white/20 px-4 py-2 flex gap-2.5 rounded-xl h-full w-full justify-center items-center text-white">
                         Save
                       </div>
@@ -103,13 +105,13 @@ function page() {
                   <div className="grid grid-cols-6 gap-6 text-white">
                     <div className="col-span-6 sm:col-span-4">
                       <label
-                        className="block font-medium text-sm text-white"
+                        className="block px-4 py-2 font-medium text-sm text-white"
                         htmlFor="password"
                       >
                         New Password
                       </label>
                       <input
-                        className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 focus:ring-white/90 rounded-lg shadow-inner-md mt-1 block w-full"
+                        className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 focus:ring-white/90 rounded-lg shadow-inner-md px-4 py-2"
                         id="password"
                         type="password"
                       />
@@ -123,7 +125,7 @@ function page() {
                         Confirm Password
                       </label>
                       <input
-                        className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 focus:ring-white/90 rounded-lg shadow-inner-md mt-1 block w-full"
+                        className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 focus:ring-white/90 rounded-lg shadow-inner-md px-4 py-2"
                         id="password_confirmation"
                         type="password"
                       />

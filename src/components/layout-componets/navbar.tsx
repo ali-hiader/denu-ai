@@ -83,14 +83,14 @@ function DashboardNavBar() {
                   Manage Account
                 </div>
                 <Link
-                  className="block w-full px-4 py-2 text-start text-sm leading-5 text-white hover:bg-gray-100/10 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  className="block w-full px-4 py-2 text-start text-sm leading-5 text-white hover:bg-gray-100/10 focus:outline-none focus:bg-gray-100/10 transition duration-150 ease-in-out"
                   href="/user/profile"
                 >
                   Profile
                 </Link>
 
                 <Link
-                  className="block w-full px-4 py-2 text-start text-sm leading-5 text-white hover:bg-gray-100/10 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  className="block w-full px-4 py-2 text-start text-sm leading-5 text-white hover:bg-gray-100/10 focus:outline-none focus:bg-gray-100/10 transition duration-150 ease-in-out"
                   href="/user/api-tokens"
                 >
                   API Tokens
@@ -99,7 +99,7 @@ function DashboardNavBar() {
                 <div className="border-t border-gray-200/10"></div>
                 <form method="POST" action="#">
                   <Link
-                    className="block w-full px-4 py-2 text-start text-sm leading-5 text-white hover:bg-gray-100/10 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                    className="block w-full px-4 py-2 text-start text-sm leading-5 text-white hover:bg-gray-100/10 focus:outline-none focus:bg-gray-100/10 transition duration-150 ease-in-out"
                     href="/login"
                   >
                     Log Out
@@ -110,6 +110,7 @@ function DashboardNavBar() {
           </DropdownMenu>
         </div>
 
+        {/* Mobile Nav */}
         <div className="flex lg:hidden">
           <DropdownMenu>
             <DropdownMenuTrigger>
