@@ -1,20 +1,17 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import {
   Dialog,
   DialogClose,
   DialogContent,
   DialogTrigger,
 } from "../ui/dialog";
-import SettingIcon from "./icons/setting";
 import Link from "next/link";
 
-function SettingDialog() {
+function SettingDialog({ children }: PropsWithChildren) {
   return (
     <Dialog>
       <form>
-        <DialogTrigger asChild>
-          <SettingIcon />
-        </DialogTrigger>
+        <DialogTrigger asChild>{children}</DialogTrigger>
         <DialogContent className="sm:max-w-5xl bg-[#1D122C] border-none p-0 shadow-[inset_0_0_8px_2px_rgba(179,83,235,0.4),inset_0_0_2px_rgba(255,255,255,0.2)]">
           <div className="px-6 py-4">
             <div className="text-lg font-medium text-white">Webhook URL</div>
@@ -152,7 +149,7 @@ function SettingDialog() {
                   </div>
                 </button>
               </DialogClose>
-              <button className="ms-3 rounded-lg flex gap-2.5 justify-center items-center relative h-full w-auto flex justify-center bg-transparent items-center text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40">
+              <button className="ms-3 rounded-lg flex gap-2.5 justify-center items-center relative h-full w-auto bg-transparent text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40">
                 <div className="ring-inset ring-[1px] ring-white/20 px-4 py-2 flex gap-2.5 rounded-lg h-full w-full justify-center items-center text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

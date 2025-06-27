@@ -1,3 +1,5 @@
+import CustomCheckbox from "@/components/apiComponents/checkbox";
+import ApiDialog from "@/components/user/api-dialog";
 import React from "react";
 
 function page() {
@@ -46,6 +48,7 @@ function page() {
                             className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 focus:ring-white/90 rounded-lg shadow-inner-md px-4 py-2 ring-1 ring-white/20"
                             id="name"
                             type="text"
+                            required
                           />
                         </div>
 
@@ -59,14 +62,7 @@ function page() {
 
                           <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <label className="flex items-center">
-                              <input
-                                type="checkbox"
-                                className="rounded border-gray-300 text-indigo-600 shadow-sm focus-within::ring-1 focus:ring-indigo-500"
-                                value="generate"
-                              />
-                              <span className="ms-2 text-sm text-gray-600">
-                                generate
-                              </span>
+                              <CustomCheckbox name="Generate" />
                             </label>
                           </div>
                         </div>
@@ -75,22 +71,23 @@ function page() {
                         <div className="hidden text-sm text-white me-3">
                           Created.
                         </div>
-
-                        <button
-                          type="submit"
-                          className="rounded-lg flex gap-2.5 justify-center items-center relative h-full w-auto flex justify-center bg-transparent items-center text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg"
-                        >
-                          <div className="ring-inset ring-[1px] ring-white/20 px-4 py-2 flex gap-2.5 rounded-lg h-full w-full justify-center items-center text-white">
-                            Create
-                          </div>
-                        </button>
+                        <ApiDialog>
+                          <button
+                            type="submit"
+                            className="rounded-lg flex gap-2.5 justify-center items-center relative h-full w-auto  bg-transparent  text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg"
+                          >
+                            <div className="ring-inset ring-[1px] ring-white/20 px-4 py-2 flex gap-2.5 rounded-lg h-full w-full justify-center items-center text-white">
+                              Create
+                            </div>
+                          </button>
+                        </ApiDialog>
                       </div>
                     </div>
                   </form>
                 </div>
               </div>
 
-              <div className="hidden fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50">
+              {/* <div className="hidden fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50">
                 <div className="fixed inset-0 transform transition-all hidden">
                   <div className="absolute inset-0 bg-black opacity-75 backdrop-blur-sm"></div>
                 </div>
@@ -127,7 +124,7 @@ function page() {
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="jetstream-modal fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50 pointer-events-none">
                 <div className="fixed inset-0 transform transition-all hidden">
@@ -169,7 +166,7 @@ function page() {
 
                     <button
                       type="submit"
-                      className="rounded-lg flex gap-2.5 justify-center items-center relative h-full w-auto flex justify-center bg-transparent items-center text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg ms-3"
+                      className="rounded-lg gap-2.5 relative h-full w-auto flex justify-center bg-transparent items-center text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg ms-3"
                     >
                       <div className="ring-inset ring-[1px] ring-white/20 px-4 py-2 flex gap-2.5 rounded-lg h-full w-full justify-center items-center text-white">
                         Save

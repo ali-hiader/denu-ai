@@ -11,6 +11,7 @@ import {
 import ThreeBarsIcon from "./icons/3Bars";
 import CustomCheckbox from "./checkbox";
 import SettingDialog from "./setting-dialog";
+import SettingIcon from "./icons/setting";
 
 function ApiTasks() {
   const [inputValue, setInputValue] = useState("");
@@ -18,11 +19,13 @@ function ApiTasks() {
     <section className="p-6 rounded-lg">
       <h3 className="mb-4 text-lg font-semibold text-white">Your API Tasks</h3>
       <div className="flex justify-end mb-4">
-        <button className="ml-2 rounded-lg flex gap-2.5 justify-center items-center relative h-full w-auto  bg-transparent text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40">
-          <div className="ring-inset ring-[1px] ring-white/20 px-4 py-2 flex gap-2.5 rounded-lg h-full w-full justify-center items-center">
-            <SettingDialog />
-          </div>
-        </button>
+        <SettingDialog>
+          <button className="ml-2 rounded-lg flex gap-2.5 justify-center items-center relative h-full w-auto  bg-transparent text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40">
+            <div className="ring-inset ring-[1px] ring-white/20 px-4 py-2 flex gap-2.5 rounded-lg h-full w-full justify-center items-center">
+              <SettingIcon />
+            </div>
+          </button>
+        </SettingDialog>
       </div>
 
       <div className="rounded-lg">
@@ -35,7 +38,7 @@ function ApiTasks() {
                 Search
               </label>
 
-              <label className="fi-input-wrp flex rounded-lg ring-1 max-w-60 transition duration-75 bg-white/5 shadow-[0_0_1px_1px_rgba(255,255,255,0.2)] dark:bg-white/5 focus-within:ring-2 ring-gray-950/10 dark:ring-white/20 focus-within:ring-[#d97706] dark:focus-within:ring-primary-500">
+              <label className="fi-input-wrp flex rounded-lg ring-1 sm:min-w-60 transition duration-75 bg-white/5 shadow-[0_0_1px_1px_rgba(255,255,255,0.2)] dark:bg-white/5 focus-within:ring-2 ring-gray-950/10 dark:ring-white/20 focus-within:ring-[#d97706] dark:focus-within:ring-primary-500">
                 <span className="flex items-center gap-x-3 ps-3 pe-2">
                   <SearchIcon />
                 </span>
