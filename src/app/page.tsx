@@ -1,10 +1,10 @@
-import FAQs from "@/components/layoutComponents/faqs";
-import Features from "@/components/layoutComponents/features";
-import Footer from "@/components/layoutComponents/footer";
-import Header from "@/components/layoutComponents/header";
-import HowItWorks from "@/components/layoutComponents/howItWorks";
-import Navbar from "@/components/layoutComponents/navbar";
-import Pricing from "@/components/layoutComponents/pricing";
+import FAQs from "@/components/HomePage/FAQs";
+import Features from "@/components/HomePage/Features";
+import Footer from "@/components/HomePage/Footer";
+import Header from "@/components/HomePage/Header";
+import HowItWorks from "@/components/HomePage/HowItWorks";
+import Navbar from "@/components/HomePage/Navbar";
+import Pricing from "@/components/HomePage/Pricing";
 import React from "react";
 
 function page() {

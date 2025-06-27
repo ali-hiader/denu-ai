@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { BeforeAfterRevealCard } from "./beforeAndAfter";
+import { BeforeAfterRevealCard } from "./BeforeAfterRevealCard";
 
 const imageData = [
   {

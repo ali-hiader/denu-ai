@@ -1,5 +1,5 @@
 import React from "react";
-import { BeforeAfterRevealCard } from "./beforeAndAfter";
+import { BeforeAfterRevealCard } from "./BeforeAfterRevealCard";
 import Link from "next/link";
 
 function Header() {
@@ -62,7 +62,7 @@ function Header() {
                   {" "}
                   <Link
                     seo-landings=""
-                    href="#"
+                    href="/register"
                     className="group relative inline-block w-full sm:w-auto"
                   >
                     {" "}

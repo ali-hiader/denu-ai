@@ -63,7 +63,7 @@ function Pricing() {
               <div className="relative">
                 {" "}
                 <Link
-                  href="#"
+                  href="/register"
                   className="relative block w-full text-center py-3 px-6 rounded-full font-bold transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600 hover:scale-[1.02]"
                 >
                   {" "}
@@ -115,7 +115,7 @@ function Pricing() {
               <div className="relative">
                 {" "}
                 <Link
-                  href="#"
+                  href="/register"
                   className="relative block w-full text-center py-3 px-6 rounded-full font-bold transition-all duration-300 bg-primary text-white hover:bg-primary-dark hover:scale-[1.02]"
                 >
                   {" "}
@@ -164,7 +164,7 @@ function Pricing() {
               <div className="relative">
                 {" "}
                 <Link
-                  href="#"
+                  href="/register"
                   className="relative block w-full text-center py-3 px-6 rounded-full font-bold transition-all duration-300 bg-gray-700 text-white hover:bg-gray-600 hover:scale-[1.02]"
                 >
                   {" "}

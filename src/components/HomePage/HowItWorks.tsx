@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import ImageCarousel from "./imageCarousel";
+import ImageCarousel from "./ImageCarousel";
 
 function HowItWorks() {
   return (
@@ -82,7 +82,7 @@ function HowItWorks() {
         <div className="text-center mt-8">
           {" "}
           <Link
-            href="#"
+            href="/register"
             className="group relative inline-flex items-center justify-center"
           >
             {" "}

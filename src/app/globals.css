@@ -153,4 +153,8 @@
       right: 2;
     }
   }
+
+  .innerGlow {
+    box-shadow: "inset 0 0 8px 2px rgba(179, 83, 235, 0.4), inset 0 0 2px rgba(255, 255, 255, 0.2)";
+  }
 }
