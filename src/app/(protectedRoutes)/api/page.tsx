@@ -4,7 +4,7 @@ import React from "react";
 
 function ApiPage() {
   return (
-    <main>
+    <main className="max-w-7xl mx-auto">
       <ApiHeader />
       <ApiMainContent />
     </main>
