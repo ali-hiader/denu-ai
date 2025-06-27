@@ -14,8 +14,7 @@ function FreeFeatures() {
               //               isPro
               //       }"
             >
-              N8ked
-              <span x-text="isPro ? 'PRO' : 'FREE'">FREE</span>
+              DenuAI <span x-text="isPro ? 'PRO' : 'FREE'">FREE</span>
             </span>
           </h5>
           <svg
