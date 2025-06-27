@@ -1,8 +1,14 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 function RegisterPage() {
+  const router = useRouter();
+  function onRegister() {
+    router.push("/dashboard");
+  }
   return (
     <div className="font-sans text-gray-900">
       <div className="min-h-screen flex flex-col sm:justify-center sm:items-center pt-2 sm:pt-0 bg-[#0F031F]">
@@ -20,7 +26,7 @@ function RegisterPage() {
             Register
           </h2>
 
-          <form method="POST">
+          <form method="POST" action={onRegister}>
             <div className="mt-4">
               <label
                 className="block font-medium text-sm text-white"

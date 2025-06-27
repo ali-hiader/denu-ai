@@ -1,8 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 function LoginPage() {
+  const router = useRouter();
+  function onLogin() {
+    router.push("/dashboard");
+  }
   return (
     <div className="font-sans text-gray-900">
       <div className="min-h-screen flex flex-col sm:justify-center sm:items-center pt-2 sm:pt-0 bg-[#0F031F]">
@@ -20,7 +27,7 @@ function LoginPage() {
             Login
           </h2>
 
-          <form method="POST" action="https://use.n8ked.app/login">
+          <form method="POST" action={onLogin}>
             <div>
               <label
                 className="block font-medium text-sm text-white"
