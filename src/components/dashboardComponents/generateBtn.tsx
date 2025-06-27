@@ -2,7 +2,7 @@ import React from "react";
 
 function GenerateBtn({ isFree }: { isFree?: boolean }) {
   return (
-    <div className="w-full z-10 order-2 p-1 bg-[#250541] lg:relative lg:flex lg:bg-transparent lg:justify-start lg:items-start">
+    <div className="w-full z-10 p-1 bg-[#250541] lg:relative lg:flex lg:bg-transparent lg:justify-start lg:items-start">
       <div className="rounded-xl px-6 mx-auto py-4 flex gap-2.5 justify-self-start  justify-center items-center self-stretch relative w-full max-w-[900px] cursor-pointer shadow-lg bg-gradient-to-r from-[#b349f5] to-[#de4bea] bg-white/0 bg-[linear-gradient(0.25912486890784375deg, #b349f5 0.00%, #de4bea 100.00%)]">
         <div
           x-show="loading"

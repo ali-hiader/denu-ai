@@ -16,7 +16,7 @@ function ImagePicker() {
   };
 
   return (
-    <div className="h-full backdrop-blur-[20px] rounded-[40px] bg-white/[2%] w-full xl:w-3/4 max-w-[900px] hover:cursor-pointer shadow-[inset_0_0_8px_2px_rgba(179,83,235,0.4),inset_0_0_2px_rgba(255,255,255,0.2)] overflow-hidden ring-inset ring-[1px] ring-white/20 flex flex-col items-center justify-center relative p-4 ">
+    <div className="h-full w-full backdrop-blur-[20px] rounded-[40px] bg-white/[2%] max-w-[950px] hover:cursor-pointer shadow-[inset_0_0_8px_2px_rgba(179,83,235,0.4),inset_0_0_2px_rgba(255,255,255,0.2)] overflow-hidden ring-inset ring-[1px] ring-white/20 flex flex-col items-center justify-center relative p-4 ">
       {preview && (
         <div className="w-full overflow-hidden object-contain">
           <Image
