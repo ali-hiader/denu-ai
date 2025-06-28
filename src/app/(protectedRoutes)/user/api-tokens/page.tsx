@@ -1,8 +1,46 @@
+"use client";
 import CustomCheckbox from "@/components/apiComponents/checkbox";
 import ApiDialog from "@/components/user/api-dialog";
-import React from "react";
+import TokenItem from "@/components/user/token-item";
+import { FormEvent, useState } from "react";
 
-function page() {
+function ApiTokenpage() {
+  const [inputValue, setInputValue] = useState("");
+  const [error, setError] = useState("");
+  const [tokenList, setTokenList] = useState<
+    { input: string; premission: string | null }[]
+  >([]);
+
+  function createToken(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const permission = formData.get("permission");
+
+    if (inputValue.length === 0) {
+      setError("Token name is required");
+      return;
+    }
+
+    setTokenList((prev) => [
+      ...prev,
+      {
+        input: inputValue,
+        premission: permission ? (permission as string) : null,
+      },
+    ]);
+  }
+
+  function deleteToken(index: number) {
+    setTokenList((prev) => prev.filter((_, i) => i !== index));
+  }
+
+  function updatePermission(index: number, permission: string | null) {
+    console.log(index, permission);
+    setTokenList((prev) =>
+      prev.map((t, i) => (i === index ? { ...t, premission: permission } : t))
+    );
+  }
+
   return (
     <>
       <header className=" shadow">
@@ -34,7 +72,7 @@ function page() {
                 </div>
 
                 <div className="mt-5 md:mt-0 md:col-span-2 ">
-                  <form>
+                  <form onSubmit={createToken}>
                     <div className="px-4 py-5 backdrop-blur-[20px] bg-white/[2%] sm:p-6 shadow-inner-xl shadow-[#B353EB]/80 ring-inset ring-[1px] ring-white/20 rounded-xl shadow-[inset_0_0_8px_2px_rgba(179,83,235,0.4),inset_0_0_2px_rgba(255,255,255,0.2)]">
                       <div className="grid grid-cols-6 gap-6 text-white">
                         <div className="col-span-6 sm:col-span-4">
@@ -48,8 +86,12 @@ function page() {
                             className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 focus:ring-white/90 rounded-lg shadow-inner-md px-4 py-2 ring-1 ring-white/20"
                             id="name"
                             type="text"
-                            required
+                            autoFocus
+                            onChange={(e) => setInputValue(e.target.value)}
                           />
+                          {error && (
+                            <p className="text-sm text-red-600 mt-2">{error}</p>
+                          )}
                         </div>
 
                         <div className="col-span-6">
@@ -62,7 +104,10 @@ function page() {
 
                           <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <label className="flex items-center">
-                              <CustomCheckbox name="Generate" />
+                              <CustomCheckbox
+                                name="Generate"
+                                checkboxName="permission"
+                              />
                             </label>
                           </div>
                         </div>
@@ -71,7 +116,18 @@ function page() {
                         <div className="hidden text-sm text-white me-3">
                           Created.
                         </div>
-                        <ApiDialog>
+                        {inputValue.length !== 0 ? (
+                          <ApiDialog>
+                            <button
+                              type="submit"
+                              className="rounded-lg flex gap-2.5 justify-center items-center relative h-full w-auto  bg-transparent  text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg"
+                            >
+                              <div className="ring-inset ring-[1px] ring-white/20 px-4 py-2 flex gap-2.5 rounded-lg h-full w-full justify-center items-center text-white">
+                                Create
+                              </div>
+                            </button>
+                          </ApiDialog>
+                        ) : (
                           <button
                             type="submit"
                             className="rounded-lg flex gap-2.5 justify-center items-center relative h-full w-auto  bg-transparent  text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg"
@@ -80,162 +136,58 @@ function page() {
                               Create
                             </div>
                           </button>
-                        </ApiDialog>
+                        )}
                       </div>
                     </div>
                   </form>
                 </div>
               </div>
 
-              {/* <div className="hidden fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50">
-                <div className="fixed inset-0 transform transition-all hidden">
-                  <div className="absolute inset-0 bg-black opacity-75 backdrop-blur-sm"></div>
-                </div>
-
-                <div className="mb-6 bg-[#1D122C] rounded-[20px] overflow-hidden shadow-inner-xl shadow-[#B353EB]/80 ring-inset ring-[1px] ring-white/20 transform transition-all sm:w-full sm:max-w-2xl sm:mx-auto text-white hidden">
-                  <div className="px-6 py-4">
-                    <div className="text-lg font-medium text-white">
-                      API Token
-                    </div>
-
-                    <div className="mt-4 text-sm text-white/80">
-                      <div>
-                        Please copy your new API token. For your security, it
-                        won&apos;t be shown again.
-                      </div>
-
-                      <input
-                        className="mt-1 block w-3/4 bg-white/[6%] text-white border-white/20 focus:border-white/20 focus:ring-white/90 rounded-lg shadow-inner-md mt-4 bg-gray-100 px-4 py-2 rounded font-mono text-sm text-gray-500 w-full break-all"
-                        x-ref="plaintextToken"
-                        type="text"
-                        readOnly
-                        autoFocus
-                        spellCheck
-                      />
+              {tokenList.length > 0 && (
+                <>
+                  <div className="hidden sm:block">
+                    <div className="py-8">
+                      <div className="border-t border-gray-200"></div>
                     </div>
                   </div>
 
-                  <div className="flex flex-row justify-end px-6 py-4 bg-white/[2%] border-t border-white/10 text-end">
-                    <button
-                      type="button"
-                      className="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              </div> */}
-
-              <div className="jetstream-modal fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50 pointer-events-none">
-                <div className="fixed inset-0 transform transition-all hidden">
-                  <div className="absolute inset-0 bg-black opacity-75 backdrop-blur-sm"></div>
-                </div>
-
-                <div
-                  x-show="show"
-                  className="mb-6 bg-[#1D122C] rounded-[20px] overflow-hidden shadow-inner-xl shadow-[#B353EB]/80 ring-inset ring-[1px] ring-white/20 transform transition-all sm:w-full sm:max-w-2xl sm:mx-auto text-white hidden"
-                >
-                  <div className="px-6 py-4">
-                    <div className="text-lg font-medium text-white">
-                      API Token Permissions
-                    </div>
-
-                    <div className="mt-4 text-sm text-white/80">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <label className="flex items-center">
-                          <input
-                            type="checkbox"
-                            className="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500"
-                            value="generate"
-                          />
-                          <span className="ms-2 text-sm text-gray-600">
-                            generate
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-row justify-end px-6 py-4 bg-white/[2%] border-t border-white/10 text-end">
-                    <button
-                      type="button"
-                      className="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150"
-                    >
-                      Cancel
-                    </button>
-
-                    <button
-                      type="submit"
-                      className="rounded-lg gap-2.5 relative h-full w-auto flex justify-center bg-transparent items-center text-md hover:cursor-pointer text-center bg-gradient-to-b from-[#B353EB]/20 to-[#B353EB]/40 shadow-inner-lg shadow-[#B353EB]/40 transition duration-300 ease-in-out transform hover:-translate-y-0.5 hover:shadow-lg ms-3"
-                    >
-                      <div className="ring-inset ring-[1px] ring-white/20 px-4 py-2 flex gap-2.5 rounded-lg h-full w-full justify-center items-center text-white">
-                        Save
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="hidden jetstream-modal fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50 pointer-events-none">
-                <div
-                  x-show="show"
-                  className="fixed inset-0 transform transition-all hidden"
-                >
-                  <div className="absolute inset-0 bg-black opacity-75 backdrop-blur-sm"></div>
-                </div>
-
-                <div
-                  x-show="show"
-                  className="hidden mb-6 bg-[#1D122C] rounded-[20px] overflow-hidden shadow-inner-xl shadow-[#B353EB]/80 ring-inset ring-[1px] ring-white/20 transform transition-all sm:w-full sm:max-w-2xl sm:mx-auto text-white"
-                >
-                  <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                    <div className="sm:flex sm:items-start">
-                      <div className="mx-auto shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                        <svg
-                          className="h-6 w-6 text-red-600"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
-                          ></path>
-                        </svg>
-                      </div>
-
-                      <div className="mt-3 text-center sm:mt-0 sm:ms-4 sm:text-start">
-                        <h3 className="text-lg font-medium text-gray-900">
-                          Delete API Token
+                  {/* Manage Api Token */}
+                  <div className="md:grid md:grid-cols-3 md:gap-6">
+                    <div className="md:col-span-1 flex justify-between">
+                      <div className="px-4 sm:px-0">
+                        <h3 className="text-lg font-medium text-white">
+                          Manage API Tokens
                         </h3>
 
-                        <div className="mt-4 text-sm text-gray-600">
-                          Are you sure you would like to delete this API token?
-                        </div>
+                        <p className="mt-1 text-sm text-gray-300">
+                          You may delete any of your existing tokens if they are
+                          no longer needed.
+                        </p>
                       </div>
+
+                      <div className="px-4 sm:px-0"></div>
+                    </div>
+
+                    <div className="mt-5 md:mt-0 md:col-span-2 ">
+                      <form>
+                        <div className="px-4 py-5 backdrop-blur-[20px] bg-white/[2%] sm:p-6 shadow-inner-xl shadow-[#B353EB]/80 ring-inset ring-[1px] ring-white/20 rounded-xl shadow-[inset_0_0_8px_2px_rgba(179,83,235,0.4),inset_0_0_2px_rgba(255,255,255,0.2)]">
+                          <div className="space-y-6">
+                            {tokenList.map((token, i) => (
+                              <TokenItem
+                                key={token.input}
+                                token={token}
+                                deleteFn={deleteToken}
+                                updatePermission={updatePermission}
+                                index={i}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </form>
                     </div>
                   </div>
-
-                  <div className="flex flex-row justify-end px-6 py-4 bg-gray-100 text-end">
-                    <button
-                      type="button"
-                      className="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150"
-                    >
-                      Cancel
-                    </button>
-
-                    <button
-                      type="button"
-                      className="inline-flex items-center justify-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150 ms-3"
-                    >
-                      Delete
-                    </button>
-                  </div>
-                </div>
-              </div>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -244,4 +196,4 @@ function page() {
   );
 }
 
-export default page;
+export default ApiTokenpage;

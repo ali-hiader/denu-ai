@@ -75,7 +75,10 @@ function ApiTasks() {
                             {" "}
                             <div className="flex items-center gap-x-3 justify-between ">
                               {" "}
-                              <CustomCheckbox name="Created At" />
+                              <CustomCheckbox
+                                name="Created At"
+                                checkboxName="created"
+                              />
                             </div>
                           </div>
                         </div>
@@ -87,7 +90,10 @@ function ApiTasks() {
                             {" "}
                             <div className="flex items-center gap-x-3 justify-between ">
                               {" "}
-                              <CustomCheckbox name="Updated At" />
+                              <CustomCheckbox
+                                name="Updated At"
+                                checkboxName="created"
+                              />
                             </div>
                           </div>
                         </div>

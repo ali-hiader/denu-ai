@@ -5,16 +5,17 @@ import {
   DialogContent,
   DialogTrigger,
 } from "../ui/dialog";
+import { DialogTitle } from "@radix-ui/react-dialog";
 
 function ApiDialog({ children }: PropsWithChildren) {
   return (
     <Dialog>
-      <form>
-        <DialogTrigger asChild>{children}</DialogTrigger>
-      </form>
+      <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-2xl rounded-2xl bg-[#1D122C] border-none p-0 shadow-[inset_0_0_8px_2px_rgba(179,83,235,0.4),inset_0_0_2px_rgba(255,255,255,0.2)]">
         <div className="px-6 py-4">
-          <div className="text-lg font-medium text-white">API Token</div>{" "}
+          <DialogTitle className="text-lg font-medium text-white">
+            API Token
+          </DialogTitle>{" "}
           <div className="mt-4 text-sm text-white/80">
             <div>
               Please copy your new API token. For your security, it won&apos;t

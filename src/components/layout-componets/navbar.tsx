@@ -138,7 +138,7 @@ function DashboardNavBar() {
               </Link>
 
               <Link
-                href="/affilate"
+                href="/affiliate"
                 className="block px-4 py-4 text-sm text-white w-full rounded-xl"
               >
                 <div className="flex justify-between">
@@ -148,7 +148,7 @@ function DashboardNavBar() {
               </Link>
 
               <Link
-                href="/profile"
+                href="/user/profile"
                 className="block px-4 py-4 text-sm text-white w-full rounded-xl"
               >
                 <div className="flex justify-between">
@@ -158,7 +158,7 @@ function DashboardNavBar() {
               </Link>
 
               <Link
-                href="/api-token"
+                href="/user/api-tokens"
                 className="block px-4 py-4 text-sm text-white w-full rounded-xl"
               >
                 <div className="flex justify-between">

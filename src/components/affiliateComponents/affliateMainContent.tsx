@@ -5,7 +5,10 @@ import React, { useRef } from "react";
 
 function AffliateMainContent() {
   const inputRef = useRef<null | HTMLInputElement>(null);
+
   async function copyReferralLink() {
+    inputRef.current?.select();
+    inputRef.current?.focus();
     await navigator.clipboard.writeText(inputRef.current?.value || "");
     toast("✔︎ Success!", {
       description: "Link copied to clipboard",
@@ -108,9 +111,10 @@ function AffliateMainContent() {
               type="text"
               ref={inputRef}
               readOnly
-              value="#"
+              value="https://DenuAI.app/ref/C31FEC45"
               className="block w-full min-w-0 flex-1 rounded-l-md border-gray-700 bg-white/5 px-3 py-2 text-white"
               x-ref="referralLink"
+              autoFocus
             />
             <button
               type="button"

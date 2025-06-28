@@ -1,7 +1,13 @@
 "use client";
 import { useState } from "react";
 
-export default function CustomCheckbox({ name }: { name: string }) {
+export default function CustomCheckbox({
+  name,
+  checkboxName,
+}: {
+  name: string;
+  checkboxName: string;
+}) {
   const [checked, setChecked] = useState(false);
 
   return (
@@ -15,7 +21,7 @@ export default function CustomCheckbox({ name }: { name: string }) {
           type="checkbox"
           className="hidden"
           checked={checked}
-          name="checkbox"
+          name={checkboxName}
           onChange={() => setChecked(!checked)}
         />
         <div

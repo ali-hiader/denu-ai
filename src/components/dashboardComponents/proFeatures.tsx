@@ -2,7 +2,7 @@ import React from "react";
 
 function ProFeatures() {
   return (
-    <div className="flex xl:order-none order-1 flex-col text-white bg-red mt-6 xl:mt-0 my-4 xl:ml-0 text-center">
+    <div className="flex xl:order-none order-1 flex-col text-white bg-red sm:mt-6 mt-2 xl:mt-0 my-4 xl:ml-0 text-center">
       <div className="flex flex-col gap-5 md:justify-center md:items-center relative">
         <div className="flex gap-1 items-center relative">
           <h5 className="text-xl leading-5 bg-gradient-to-r from-[#b349f5] to-[#de4bea] bg-clip-text text-transparent">

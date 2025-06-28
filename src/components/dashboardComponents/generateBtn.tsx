@@ -2,9 +2,9 @@ import React from "react";
 
 function GenerateBtn({ isFree }: { isFree?: boolean }) {
   return (
-    <div className="w-full z-10 p-1 bg-[#250541] lg:relative lg:flex lg:bg-transparent lg:justify-start lg:items-start">
-      <div className="rounded-xl px-6 mx-auto py-4 flex gap-2.5 justify-self-start  justify-center items-center self-stretch relative w-full max-w-[900px] cursor-pointer shadow-lg bg-gradient-to-r from-[#b349f5] to-[#de4bea] bg-white/0 bg-[linear-gradient(0.25912486890784375deg, #b349f5 0.00%, #de4bea 100.00%)]">
-        <div
+    <div className="fixed bottom-0 left-0 right-0 w-full z-10 p-4 lg:p-1 bg-[#250541] lg:relative lg:flex lg:bg-transparent lg:justify-start lg:items-start">
+      <div className="rounded-lg px-6 mx-auto py-4 flex gap-2.5 justify-self-start  justify-center items-center self-stretch relative w-full max-w-[900px] cursor-pointer shadow-lg bg-gradient-to-r from-[#b349f5] to-[#de4bea] bg-white/0 bg-[linear-gradient(0.25912486890784375deg, #b349f5 0.00%, #de4bea 100.00%)]">
+        {/* <div
           x-show="loading"
           className="flex items-center justify-center"
           style={{ display: "none" }}
@@ -29,7 +29,7 @@ function GenerateBtn({ isFree }: { isFree?: boolean }) {
               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
             ></path>
           </svg>
-        </div>
+        </div> */}
         <div x-show="!loading">
           <p className="leading-4 text-center text-white">
             <span

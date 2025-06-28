@@ -12,7 +12,7 @@ function CreditCTA() {
             </div>
           </div>
         </DialogClose>
-        <div className=" w-64  px-5 py-4 bg-gradient-to-b from-[#B349F5] to-[#DE4BEA] rounded-xl shadow-[inset_-4px_-4px_10px_0px_rgba(103,0,162,0.40)]  outline-1 outline-offset-[-1px] outline-white/10 flex justify-center items-center gap-1.5 hover:cursor-pointer">
+        <div className=" min-w-40 sm:w-64  px-5 py-4 bg-gradient-to-b from-[#B349F5] to-[#DE4BEA] rounded-xl shadow-[inset_-4px_-4px_10px_0px_rgba(103,0,162,0.40)]  outline-1 outline-offset-[-1px] outline-white/10 flex justify-center items-center gap-1.5 hover:cursor-pointer">
           <div className="text-center justify-start text-white text-sm font-medium font-sans leading-none ">
             Next
           </div>
