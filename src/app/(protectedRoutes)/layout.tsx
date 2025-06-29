@@ -6,10 +6,10 @@ import React, { PropsWithChildren } from "react";
 
 function DashBoardLayout({ children }: PropsWithChildren) {
   return (
-    <main className="bg-[#0F0320]">
+    <main className="bg-[#0F0320] h-full">
       <DashboardNavBar />
       <CreditsUpgradeNav />
-      {children}
+      <section className="bg-[#0F0320] overflow-hidden">{children}</section>
       <Toaster />
       <Footer />
     </main>

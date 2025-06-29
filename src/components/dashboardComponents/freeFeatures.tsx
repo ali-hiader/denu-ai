@@ -28,14 +28,14 @@ function FreeFeatures() {
             <path
               d="M9.99935 17.6192C14.6017 17.6192 18.3327 13.8882 18.3327 9.28582C18.3327 4.68344 14.6017 0.952484 9.99935 0.952484C5.39698 0.952484 1.66602 4.68344 1.66602 9.28582C1.66602 13.8882 5.39698 17.6192 9.99935 17.6192Z"
               stroke="url(#paint0_linear_2016_601)"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke-linecap="round"
               stroke-linejoin="round"
             ></path>
             <path
               d="M7.49902 9.28581L9.16569 10.9525L12.499 7.61914"
               stroke="url(#paint1_linear_2016_601)"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke-linecap="round"
               stroke-linejoin="round"
             ></path>

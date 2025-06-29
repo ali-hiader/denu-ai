@@ -9,17 +9,21 @@ import React from "react";
 
 function page() {
   return (
-    <>
-      <main>
-        <Navbar />
-        <Header />
-        <HowItWorks />
-        <Features />
-        <Pricing />
-        <FAQs />
-      </main>
+    <main
+      className="h-full bg-[#050A14] text-gray-100"
+      style={{
+        backgroundImage:
+          "radial-gradient(circle at 50% 120%, rgba(235, 0, 144, 0.1), rgba(0, 0, 0, 0) 50%)",
+      }}
+    >
+      <Navbar />
+      <Header />
+      <HowItWorks />
+      <Features />
+      <Pricing />
+      <FAQs />
       <Footer />
-    </>
+    </main>
   );
 }
 

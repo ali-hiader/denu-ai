@@ -28,21 +28,21 @@ function CreditItems() {
                   <path
                     d="M3.50033 2.5835H10.5003L12.8337 5.55718L7.00033 12.0002L1.16699 5.55718L3.50033 2.5835Z"
                     stroke="white"
-                    stroke-width="1.2"
+                    strokeWidth="1.2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path>
                   <path
                     d="M6.41699 2.5835L4.66699 5.55718L7.00032 12.0002L9.33366 5.55718L7.58366 2.5835"
                     stroke="white"
-                    stroke-width="1.2"
+                    strokeWidth="1.2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path>
                   <path
                     d="M1.16699 5.55713H12.8337"
                     stroke="white"
-                    stroke-width="1.2"
+                    strokeWidth="1.2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path>
@@ -93,21 +93,21 @@ function CreditItems() {
                     <path
                       d="M3.50033 2.5835H10.5003L12.8337 5.55718L7.00033 12.0002L1.16699 5.55718L3.50033 2.5835Z"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
                     <path
                       d="M6.41699 2.5835L4.66699 5.55718L7.00032 12.0002L9.33366 5.55718L7.58366 2.5835"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
                     <path
                       d="M1.16699 5.55713H12.8337"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
@@ -172,21 +172,21 @@ function CreditItems() {
                     <path
                       d="M3.50033 2.5835H10.5003L12.8337 5.55718L7.00033 12.0002L1.16699 5.55718L3.50033 2.5835Z"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
                     <path
                       d="M6.41699 2.5835L4.66699 5.55718L7.00032 12.0002L9.33366 5.55718L7.58366 2.5835"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
                     <path
                       d="M1.16699 5.55713H12.8337"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
@@ -241,21 +241,21 @@ function CreditItems() {
                     <path
                       d="M3.50033 2.5835H10.5003L12.8337 5.55718L7.00033 12.0002L1.16699 5.55718L3.50033 2.5835Z"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
                     <path
                       d="M6.41699 2.5835L4.66699 5.55718L7.00032 12.0002L9.33366 5.55718L7.58366 2.5835"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
                     <path
                       d="M1.16699 5.55713H12.8337"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
@@ -310,21 +310,21 @@ function CreditItems() {
                     <path
                       d="M3.50033 2.5835H10.5003L12.8337 5.55718L7.00033 12.0002L1.16699 5.55718L3.50033 2.5835Z"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
                     <path
                       d="M6.41699 2.5835L4.66699 5.55718L7.00032 12.0002L9.33366 5.55718L7.58366 2.5835"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
                     <path
                       d="M1.16699 5.55713H12.8337"
                       stroke="white"
-                      stroke-width="1.2"
+                      strokeWidth="1.2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>
