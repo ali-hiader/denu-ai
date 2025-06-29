@@ -1,95 +1,76 @@
+import Link from "next/link";
 import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-dark-deeper py-8">
-      {" "}
+    <footer className="bg-[#050A14] py-8">
       <div className="container mx-auto px-4">
-        {" "}
         <div className="space-y-6">
-          {" "}
           <div className="flex flex-wrap justify-between md:justify-start gap-4 md:gap-6 border-b border-gray-800 pb-4">
-            {" "}
             <h3 className="text-white font-medium w-full md:w-auto md:mr-6">
               Quick Links
-            </h3>{" "}
+            </h3>
             <div className="flex flex-wrap gap-4 md:gap-6">
-              {" "}
-              <a
-                href="https://use.DenuAI.app/terms-of-service"
+              <Link
+                href="/terms-of-services"
                 className="text-sm text-gray-400 hover:text-primary transition-colors"
               >
-                {" "}
-                Terms{" "}
-              </a>
-              <a
-                href="https://use.DenuAI.app/privacy-policy"
+                Terms
+              </Link>
+              <Link
+                href="/privacy-policy"
                 className="text-sm text-gray-400 hover:text-primary transition-colors"
               >
-                {" "}
-                Privacy{" "}
-              </a>
-              <a
+                Privacy
+              </Link>
+              <Link
                 href="mailto:hey@DenuAI.app"
                 className="text-sm text-gray-400 hover:text-primary transition-colors"
               >
-                {" "}
-                Contact{" "}
-              </a>{" "}
-            </div>{" "}
-          </div>{" "}
+                Contact
+              </Link>
+            </div>
+          </div>
           <div className=" pb-4">
-            {" "}
-            <h3 className="text-white font-medium mb-2">
-              Popular Services
-            </h3>{" "}
+            <h3 className="text-white font-medium mb-2">Popular Services</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-1">
-              {" "}
-              <a
+              <Link
                 href="/celebrity-nudes"
                 className="text-gray-400 hover:text-primary text-sm"
               >
-                {" "}
-                Celebrity Nude Generator with DenuAI AI{" "}
-              </a>
-              <a
+                Celebrity Nude Generator with DenuAI AI
+              </Link>
+              <Link
                 href="/ai-girlfriend"
                 className="text-gray-400 hover:text-primary text-sm"
               >
-                {" "}
-                AI Girlfriend Creator with DenuAI AI{" "}
-              </a>
-              <a
+                AI Girlfriend Creator with DenuAI AI
+              </Link>
+              <Link
                 href="/anime-ai-nude"
                 className="text-gray-400 hover:text-primary text-sm"
               >
-                {" "}
-                Anime AI Nude Generator{" "}
-              </a>
-              <a
+                Anime AI Nude Generator
+              </Link>
+              <Link
                 href="/nudify-photos"
                 className="text-gray-400 hover:text-primary text-sm"
               >
-                {" "}
-                Nudify Photos with DenuAI AI{" "}
-              </a>
-              <a
+                Nudify Photos with DenuAI AI
+              </Link>
+              <Link
                 href="/bikini-to-nude"
                 className="text-gray-400 hover:text-primary text-sm"
               >
-                {" "}
-                Bikini to Nude AI Generator{" "}
-              </a>{" "}
-            </div>{" "}
-          </div>{" "}
+                Bikini to Nude AI Generator
+              </Link>
+            </div>
+          </div>
           <div className="text-center text-sm text-gray-400">
-            {" "}
-            <p>© 2025 DenuAI. All rights reserved.</p>{" "}
-          </div>{" "}
+            <p>© 2025 DenuAI. All rights reserved.</p>
+          </div>
           <div className="border-t border-gray-800 pt-8 mt-8">
-            {" "}
             <div className="space-y-4 text-sm text-gray-500">
-              {" "}
               <p>
                 By entering this website you confirm to be 18+ to use this
                 website. If you are under 18 please immediately leave this
@@ -105,7 +86,7 @@ function Footer() {
                 not anyhow aimed to insult anyone.
               </p>
               <p>
-                This website does not support the creation of {"deepfake"}{" "}
+                This website does not support the creation of {"deepfake"}
                 content.
               </p>
               <p>
@@ -115,11 +96,11 @@ function Footer() {
               <p>
                 Deepfake content is strictly prohibited aswell as being
                 impossible to generate.
-              </p>{" "}
-            </div>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }

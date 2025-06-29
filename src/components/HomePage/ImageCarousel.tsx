@@ -10,20 +10,27 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { BeforeAfterRevealCard } from "./BeforeAfterRevealCard";
+import { BeforeAfterRevealCard } from "./before-after-reveal-card";
 
 const imageData = [
   {
-    beforeSrc: "/nude1.webp",
-    afterSrc: "/clothes1.jpg",
+    //   beforeSrc: "/nude1.webp",
+    //   afterSrc: "/clothes1.jpg",
+    // },
+    // {
+    //   beforeSrc: "/nude2.webp",
+    //   afterSrc: "/clothes2.jpg",
+    // },
+    // {
+    //   beforeSrc: "/nude3.webp",
+    //   afterSrc: "/clothes3.jpg",
+    // },
+    beforeSrc: "/image-1.jpg",
+    afterSrc: "/image-2.jpg",
   },
   {
-    beforeSrc: "/nude2.webp",
-    afterSrc: "/clothes2.jpg",
-  },
-  {
-    beforeSrc: "/nude3.webp",
-    afterSrc: "/clothes3.jpg",
+    beforeSrc: "/image-1.jpg",
+    afterSrc: "/image-2.jpg",
   },
 ];
 

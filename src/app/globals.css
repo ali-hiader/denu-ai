@@ -111,6 +111,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --dark-depeer: #050a14;
 }
 
 @layer base {
@@ -137,18 +138,12 @@
 
   @keyframes moveLeftRight {
     0% {
-      right: 2; /* 500 - 30 (dot width) */
+      right: 2;
     }
-    /* 25% {
-      left: 50%;
-    } */
     50% {
       right: 99%;
       opacity: 0.5;
     }
-    /* 75% {
-      left: 50%;
-    } */
     100% {
       right: 2;
     }

@@ -1,16 +1,15 @@
 import Link from "next/link";
 import React from "react";
 import ImageCarousel from "./ImageCarousel";
+import RightArrow from "./icons/right-arrow";
 
 function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-16 bg-dark-deeper">
-      {" "}
+    <section id="how-it-works" className="py-16 bg-[#050A14]">
       <div className="container mx-auto px-4">
-        {" "}
-        {/* Steps */}
+        {/* Heading */}
+        {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
         <div className="text-center mb-8">
-          {" "}
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             How It Works
           </h2>{" "}
@@ -18,20 +17,17 @@ function HowItWorks() {
             Nudify your images in three simple steps
           </p>{" "}
         </div>
+        {/* Main Content */}
         <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto items-center">
-          {" "}
+          {/* Steps */}
+          {/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
           <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4">
-            {" "}
             <div className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700/30">
-              {" "}
               <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary font-bold border border-primary/20">
-                {" "}
                 1{" "}
               </div>{" "}
               <div>
-                {" "}
                 <div className="flex items-center gap-2 mb-1">
-                  {" "}
                   <span className="text-xl">📤</span>{" "}
                   <h3 className="text-lg font-bold text-white">Upload Photo</h3>{" "}
                 </div>{" "}
@@ -41,15 +37,11 @@ function HowItWorks() {
               </div>{" "}
             </div>
             <div className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700/30">
-              {" "}
               <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary font-bold border border-primary/20">
-                {" "}
                 2{" "}
               </div>{" "}
               <div>
-                {" "}
                 <div className="flex items-center gap-2 mb-1">
-                  {" "}
                   <span className="text-xl">✨</span>{" "}
                   <h3 className="text-lg font-bold text-white">AI Magic</h3>{" "}
                 </div>{" "}
@@ -59,15 +51,11 @@ function HowItWorks() {
               </div>{" "}
             </div>
             <div className="flex items-center gap-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700/30">
-              {" "}
               <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary font-bold border border-primary/20">
-                {" "}
                 3{" "}
               </div>{" "}
               <div>
-                {" "}
                 <div className="flex items-center gap-2 mb-1">
-                  {" "}
                   <span className="text-xl">⬇️</span>{" "}
                   <h3 className="text-lg font-bold text-white">Download</h3>{" "}
                 </div>{" "}
@@ -76,33 +64,19 @@ function HowItWorks() {
                 </p>{" "}
               </div>{" "}
             </div>{" "}
-          </div>{" "}
+          </div>
+
+          {/* Images Display and Comparison */}
           <ImageCarousel />
         </div>{" "}
         <div className="text-center mt-8">
-          {" "}
           <Link
             href="/register"
             className="group relative inline-flex items-center justify-center"
           >
-            {" "}
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-primary-dark rounded-full"></div>{" "}
             <div className="relative flex items-center justify-center text-white font-bold py-3 px-8 rounded-full transition-all duration-300 group-hover:scale-105">
-              {" "}
-              <span>Try Denu AI Now</span>{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 ml-2 transform transition-transform group-hover:translate-x-1"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                {" "}
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>{" "}
-              </svg>{" "}
+              <span>Try Denu AI Now</span> <RightArrow />
             </div>{" "}
           </Link>{" "}
         </div>{" "}
