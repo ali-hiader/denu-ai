@@ -23,7 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${quicksand.className} text-quicksand system-ui antialiased h-full`}
+        className={`${quicksand.className} bg-[#050A14] text-quicksand system-ui antialiased h-full text-white`}
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 50% 120%, rgba(235, 0, 144, 0.1), rgba(0, 0, 0, 0) 50%)",
+        }}
       >
         {children}
       </body>
